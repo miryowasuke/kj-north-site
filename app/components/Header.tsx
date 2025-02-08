@@ -25,7 +25,7 @@ export default function Header() {
             href="/services"
             className="text-white hover:text-gray-300 hover:underline"
           >
-            Survice
+            services
           </Link>
           <Link
             href="/works"
