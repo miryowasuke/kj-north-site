@@ -22,7 +22,7 @@ export default function HamburgerMenu() {
               href="/"
               className="block py-2 text-white hover:text-gray-300 hover:underline"
             >
-              トップ
+              Top
             </Link>
           </li>
           <li>
@@ -30,15 +30,7 @@ export default function HamburgerMenu() {
               href="/about"
               className="block py-2 text-white hover:text-gray-300 hover:underline"
             >
-              会社情報
-            </Link>
-          </li>
-          <li>
-            <Link
-              href="/works"
-              className="block py-2 text-white hover:text-gray-300 hover:underline"
-            >
-              実績
+              About
             </Link>
           </li>
           <li>
@@ -46,7 +38,24 @@ export default function HamburgerMenu() {
               href="/services"
               className="block py-2 text-white hover:text-gray-300 hover:underline"
             >
-              サービス
+              Services
+            </Link>
+          </li>
+          <li>
+            <Link
+              href="/works"
+              className="block py-2 text-white hover:text-gray-300 hover:underline"
+            >
+              Works
+            </Link>
+          </li>
+
+          <li>
+            <Link
+              href="/news"
+              className="text-white hover:text-gray-300 hover:underline"
+            >
+              News
             </Link>
           </li>
           <li>
@@ -54,7 +63,7 @@ export default function HamburgerMenu() {
               href="/contact"
               className="block py-2 text-white hover:text-gray-300 hover:underline"
             >
-              お問い合わせ
+              Contact
             </Link>
           </li>
         </ul>
