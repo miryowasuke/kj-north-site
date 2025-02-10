@@ -4,10 +4,10 @@ module.exports = {
   theme: {
     extend: {
       colors: {
-        darkBrown: "#4B3832",
-        stoneGray: "#7D7D7D",
-        ivoryWhite: "#F2F2F2",
-        deepNavy: "#2C3E50",
+        darkNavy: "#1E3D58", // ダークネイビー
+        warmWood: "#8B5E3C", // ウォームウッド（アクセント）
+        stoneGray: "#A49A8F", // ストーングレー
+        ivoryWhite: "#F5F5F5", // アイボリーホワイト
       },
     },
   },
