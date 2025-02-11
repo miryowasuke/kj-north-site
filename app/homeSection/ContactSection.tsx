@@ -7,7 +7,7 @@ import Image from "next/image";
 
 export default function ContactSection() {
   return (
-    <section className="relative py-16 bg-white text-darkNavy overflow-hidden">
+    <section className="relative py-16 bg-white text-warmWood overflow-hidden">
       {/* 🔹 背景画像（スクロール時に動かす） */}
       <motion.div
         style={{ backgroundImage: "url('/photo/photo10.jpg')" }}
@@ -64,24 +64,24 @@ export default function ContactSection() {
           className="text-center md:text-left"
         >
           {/* 🔹 アニメーション付きタイトル */}
-          <h2 className="text-darkNavy text-5xl font-bold mb-6 relative inline-block">
+          <h2 className="text-warmWood text-5xl font-bold mb-6 relative inline-block">
             Contact
             <motion.div
               initial={{ scaleX: 0 }}
               animate={{ scaleX: 1 }}
               transition={{ duration: 1, ease: "easeOut" }}
-              className="absolute bottom-0 left-0 w-full h-[4px] bg-darkNavy origin-left"
+              className="absolute bottom-0 left-0 w-full h-[4px] bg-warmWood origin-left"
             />
           </h2>
 
-          <p className="text-darkNavy mb-6 text-lg leading-relaxed">
+          <p className="text-warmWood mb-6 text-lg leading-relaxed">
             お問い合わせはこちらからどうぞ。お気軽にご連絡ください。
           </p>
           <Link href="/contact">
             <motion.button
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
-              className="bg-darkNavy text-white px-6 py-3 rounded shadow-md transition-all duration-300"
+              className="bg-warmWood text-white px-6 py-3 rounded shadow-md transition-all duration-300"
             >
               お問い合わせフォーム
             </motion.button>

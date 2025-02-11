@@ -8,18 +8,18 @@ import { motion, useScroll, useTransform } from "framer-motion";
 export default function ServicesSection() {
   const sectionRef = useRef(null);
 
-  // 🔹 スクロール情報を取得
+  // スクロール情報を取得
   const { scrollYProgress } = useScroll({
     target: sectionRef,
     offset: ["start start", "end end"],
   });
 
-  // 🔹 背景画像のX軸移動を制御（右→左にスライド）
+  // 背景画像のX軸移動を制御（右→左にスライド）
   const backgroundX = useTransform(scrollYProgress, [0, 1], ["0%", "-50%"]);
 
   return (
     <section ref={sectionRef} className="relative py-16 overflow-hidden">
-      {/* 🔹 背景画像（スクロールでスライド） */}
+      {/* 背景画像（スクロールでスライド） */}
       <motion.div
         className="absolute inset-0 w-[300%] bg-cover bg-no-repeat"
         style={{
@@ -28,13 +28,13 @@ export default function ServicesSection() {
           top: "-700px",
         }}
       />
-      {/* 🔹 メインコンテンツ */}
-      <div className="relative container mx-auto px-4 text-ivoryWhite">
-        <h2 className="text-5xl font-bold mb-8 text-right">Services</h2>
+      {/* メインコンテンツ */}
+      <div className="relative container mx-auto px-4 text-ivoryWhite underline">
+        <h2 className="text-5xl font-bold mb-8 text-center">Services</h2>
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
           {/* HP制作 */}
           <motion.div
-            className="bg-warmWood bg-opacity-90 p-6 shadow-lg rounded-lg text-center"
+            className="bg-darkNavy bg-opacity-90 p-6 shadow-lg rounded-lg text-center"
             initial={{ opacity: 0, scale: 0.8 }}
             whileInView={{ opacity: 0.9, scale: 1 }}
             transition={{ duration: 0.6, ease: "easeOut" }}
@@ -59,7 +59,7 @@ export default function ServicesSection() {
 
           {/* LINE構築 */}
           <motion.div
-            className="bg-warmWood bg-opacity-90 p-6 shadow-lg rounded-lg text-center"
+            className="bg-darkNavy bg-opacity-90 p-6 shadow-lg rounded-lg text-center"
             initial={{ opacity: 0, scale: 0.8 }}
             whileInView={{ opacity: 0.9, scale: 1 }}
             transition={{ duration: 0.6, ease: "easeOut" }}
@@ -86,7 +86,7 @@ export default function ServicesSection() {
 
           {/* 動画制作 */}
           <motion.div
-            className="bg-warmWood bg-opacity-90 p-6 shadow-lg rounded-lg text-center"
+            className="bg-darkNavy bg-opacity-90 p-6 shadow-lg rounded-lg text-center"
             initial={{ opacity: 0, scale: 0.8 }}
             whileInView={{ opacity: 0.9, scale: 1 }}
             transition={{ duration: 0.6, ease: "easeOut" }}
@@ -113,7 +113,7 @@ export default function ServicesSection() {
         </div>
         <div className="mt-6 text-center">
           <Link href="/services">
-            <button className="bg-darkNavy text-white px-6 py-3 rounded hover:bg-opacity-80">
+            <button className="bg-warmWood text-white px-6 py-3 rounded hover:bg-opacity-80">
               詳しく見る
             </button>
           </Link>
