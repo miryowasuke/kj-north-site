@@ -1,16 +1,46 @@
-import React from "react";
+"use client";
+
+import React, { useRef } from "react";
 import Link from "next/link";
 import Image from "next/image";
+import { motion, useScroll, useTransform } from "framer-motion";
 
 export default function ServicesSection() {
+  const sectionRef = useRef(null);
+
+  // 🔹 スクロール情報を取得
+  const { scrollYProgress } = useScroll({
+    target: sectionRef,
+    offset: ["start start", "end end"],
+  });
+
+  // 🔹 背景画像のX軸移動を制御（右→左にスライド）
+  const backgroundX = useTransform(scrollYProgress, [0, 1], ["0%", "-50%"]);
+
   return (
-    <section className="py-16 bg-warmWood text-ivoryWhite">
-      <div className="container mx-auto px-4">
+    <section ref={sectionRef} className="relative py-16 overflow-hidden">
+      {/* 🔹 背景画像（スクロールでスライド） */}
+      <motion.div
+        className="absolute inset-0 w-[300%] bg-cover bg-no-repeat"
+        style={{
+          backgroundImage: `url('/photo/photo20.jpg')`, // 画像を適用
+          x: backgroundX,
+          top: "-700px",
+        }}
+      />
+      {/* 🔹 メインコンテンツ */}
+      <div className="relative container mx-auto px-4 text-ivoryWhite">
         <h2 className="text-5xl font-bold mb-8 text-right">Services</h2>
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
           {/* HP制作 */}
-          <div className="bg-stoneGray p-6 shadow-lg rounded text-center">
-            <div className="relative w-full h-40">
+          <motion.div
+            className="bg-stoneGray p-6 shadow-lg rounded text-center"
+            initial={{ opacity: 0, scale: 0.8 }}
+            whileInView={{ opacity: 1, scale: 1 }}
+            transition={{ duration: 0.6, ease: "easeOut" }}
+            viewport={{ once: true }}
+          >
+            <div className="relative w-full h-40 overflow-hidden">
               <Image
                 src="/photo/photo3.jpg"
                 alt="HP制作"
@@ -19,18 +49,23 @@ export default function ServicesSection() {
                 className="rounded-t-lg"
                 priority
               />
-              {/* 🔹 オーバーレイ（薄暗い黒色） */}
               <div className="absolute inset-0 bg-black opacity-20"></div>
             </div>
-            <h3 className="text-2xl font-bold mb-4  text-white">HP制作</h3>
+            <h3 className="text-2xl font-bold mb-4 text-white">HP制作</h3>
             <p className="text-white">
               魅力的なデザインと高品質な技術を提供します。
             </p>
-          </div>
+          </motion.div>
 
           {/* LINE構築 */}
-          <div className="bg-stoneGray p-6 shadow-lg rounded text-center">
-            <div className="relative w-full h-40">
+          <motion.div
+            className="bg-stoneGray p-6 shadow-lg rounded text-center"
+            initial={{ opacity: 0, scale: 0.8 }}
+            whileInView={{ opacity: 1, scale: 1 }}
+            transition={{ duration: 0.6, ease: "easeOut" }}
+            viewport={{ once: true }}
+          >
+            <div className="relative w-full h-40 overflow-hidden">
               <Image
                 src="/photo/photo23.jpg"
                 alt="LINE構築"
@@ -39,18 +74,23 @@ export default function ServicesSection() {
                 className="rounded-t-lg"
                 priority
               />
-              {/* 🔹 オーバーレイ（薄暗い黒色） */}
               <div className="absolute inset-0 bg-black opacity-20"></div>
             </div>
             <h3 className="text-2xl font-bold mb-4 text-white">LINE構築</h3>
             <p className="text-white">
               SNSを活用した効率的なコミュニケーションをサポートします。
             </p>
-          </div>
+          </motion.div>
 
           {/* 動画制作 */}
-          <div className="bg-stoneGray p-6 shadow-lg rounded text-center">
-            <div className="relative w-full h-40">
+          <motion.div
+            className="bg-stoneGray p-6 shadow-lg rounded text-center"
+            initial={{ opacity: 0, scale: 0.8 }}
+            whileInView={{ opacity: 1, scale: 1 }}
+            transition={{ duration: 0.6, ease: "easeOut" }}
+            viewport={{ once: true }}
+          >
+            <div className="relative w-full h-40 overflow-hidden">
               <Image
                 src="/photo/photo5.jpg"
                 alt="動画制作"
@@ -59,14 +99,13 @@ export default function ServicesSection() {
                 className="rounded-t-lg"
                 priority
               />
-              {/* 🔹 オーバーレイ（薄暗い黒色） */}
               <div className="absolute inset-0 bg-black opacity-20"></div>
             </div>
             <h3 className="text-2xl font-bold mb-4 text-white">動画制作</h3>
             <p className="text-white">
               顧客のニーズに応じたプロモーション映像を制作します。
             </p>
-          </div>
+          </motion.div>
         </div>
         <div className="mt-6 text-center">
           <Link href="/services">
