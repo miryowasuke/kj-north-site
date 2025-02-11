@@ -7,15 +7,13 @@ export default function NewsSection() {
       <div className="container mx-auto px-4">
         <h2 className="text-5xl font-bold mb-8 text-center">News</h2>
         <ul className="space-y-4">
-          <li>
-            <span className="block text-sm text-gray-400">2025.01.22</span>
-            <span className="block text-lg font-semibold">冬祭りのご案内</span>
+          <li className="flex justify-start border-b pb-2">
+            <span className="text-white pr-2">2025.01.22</span>
+            <span>冬祭りのご案内</span>
           </li>
-          <li>
-            <span className="block text-sm text-gray-400">2024.12.27</span>
-            <span className="block text-lg font-semibold">
-              冬季休業のご案内
-            </span>
+          <li className="flex justify-start border-b pb-2">
+            <span className="text-white pr-2">2024.12.27</span>
+            <span>冬季休業のご案内</span>
           </li>
         </ul>
         <div className="mt-6 text-center">
