@@ -5,7 +5,7 @@ module.exports = {
     extend: {
       colors: {
         darkNavy: "#1E3D58", // ダークネイビー
-        warmWood: "#8B5E3C", // ウォームウッド（アクセント）
+        warmWood: "#A67C52", // ウォームウッド
         stoneGray: "#A49A8F", // ストーングレー
         ivoryWhite: "#F5F5F5", // アイボリーホワイト
       },

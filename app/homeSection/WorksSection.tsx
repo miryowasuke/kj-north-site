@@ -1,6 +1,7 @@
 "use client";
 
 import React from "react";
+import { motion } from "framer-motion";
 import Link from "next/link";
 import Image from "next/image";
 import Slider from "react-slick";
@@ -55,19 +56,19 @@ const CustomNextArrow: React.FC<ArrowProps> = ({ onClick }) => (
 
 export default function WorksSection() {
   const settings = {
-    dots: true, // 下にインジケーターを表示
-    infinite: true, // 無限スクロール
-    speed: 500, // スライドの速度
-    slidesToShow: 3, // 一度に表示するスライド数
-    slidesToScroll: 1, // スライド時に移動する数
-    arrows: true, // 矢印ボタンを有効化
-    prevArrow: <CustomPrevArrow />, // カスタム矢印
-    nextArrow: <CustomNextArrow />, // カスタム矢印
-    draggable: true, // PCでマウスドラッグ可能にする
-    swipe: true, // PCでもスワイプ可能にする
+    dots: true,
+    infinite: true,
+    speed: 500,
+    slidesToShow: 3,
+    slidesToScroll: 1,
+    arrows: true,
+    prevArrow: <CustomPrevArrow />,
+    nextArrow: <CustomNextArrow />,
+    draggable: true,
+    swipe: true,
     responsive: [
       {
-        breakpoint: 1024, // タブレット対応
+        breakpoint: 1024,
         settings: {
           slidesToShow: 2,
           slidesToScroll: 1,
@@ -75,7 +76,7 @@ export default function WorksSection() {
         },
       },
       {
-        breakpoint: 768, // スマホ対応
+        breakpoint: 768,
         settings: {
           slidesToShow: 1,
           slidesToScroll: 1,
@@ -85,13 +86,45 @@ export default function WorksSection() {
   };
 
   return (
-    <section className="py-16 bg-white text-darkNavy">
-      <div className="container mx-auto px-4 text-center">
-        <h2 className="text-5xl font-bold mb-8">Works</h2>
+    <section className="relative py-16 bg-white text-darkNavy overflow-hidden">
+      {/* 🔹 背景画像（スクロール時に動くエフェクト） */}
+      <motion.div
+        style={{ backgroundImage: "url('/photo/photo20.jpg')" }}
+        className="absolute inset-0 bg-cover bg-center opacity-20"
+        initial={{ y: 50 }}
+        whileInView={{ y: 0 }}
+        transition={{ duration: 1, ease: "easeOut" }}
+        viewport={{ once: true }}
+      />
+
+      <div className="container mx-auto px-4 text-center relative z-10">
+        {/* 🔹 タイトルにラインアニメーション */}
+        <motion.h2
+          initial={{ opacity: 0, y: -20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.8, ease: "easeOut" }}
+          viewport={{ once: true }}
+          className="text-5xl font-bold mb-8 relative inline-block"
+        >
+          Works
+          <motion.div
+            initial={{ scaleX: 0 }}
+            animate={{ scaleX: 1 }}
+            transition={{ duration: 1, ease: "easeOut" }}
+            className="absolute bottom-0 left-0 w-full h-[4px] bg-darkNavy origin-left"
+          />
+        </motion.h2>
+
         <p className="mb-6">制作実績</p>
 
-        {/* スライダー */}
-        <div className="relative overflow-hidden">
+        {/* 🔹 スライダー */}
+        <motion.div
+          initial={{ opacity: 0, scale: 0.9 }}
+          whileInView={{ opacity: 1, scale: 1 }}
+          transition={{ duration: 0.8, ease: "easeOut" }}
+          viewport={{ once: true }}
+          className="relative overflow-hidden"
+        >
           <Slider {...settings}>
             {worksData.map((work, index) => (
               <div key={index} className="px-4">
@@ -116,16 +149,22 @@ export default function WorksSection() {
               </div>
             ))}
           </Slider>
-        </div>
+        </motion.div>
 
-        {/* 詳しく見るボタン */}
-        <div className="mt-6">
+        {/* 🔹 詳しく見るボタン */}
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.8, ease: "easeOut", delay: 0.2 }}
+          viewport={{ once: true }}
+          className="mt-6"
+        >
           <Link href="/works">
             <button className="bg-darkNavy text-white px-6 py-3 rounded hover:bg-opacity-80">
               詳しく見る
             </button>
           </Link>
-        </div>
+        </motion.div>
       </div>
     </section>
   );
