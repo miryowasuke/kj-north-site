@@ -34,7 +34,7 @@ export default function ServicesSection() {
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
           {/* HP制作 */}
           <motion.div
-            className="bg-warmWood bg-opacity-70 p-6 shadow-lg rounded-lg text-center"
+            className="bg-warmWood bg-opacity-90 p-6 shadow-lg rounded-lg text-center"
             initial={{ opacity: 0, scale: 0.8 }}
             whileInView={{ opacity: 0.9, scale: 1 }}
             transition={{ duration: 0.6, ease: "easeOut" }}
@@ -59,7 +59,7 @@ export default function ServicesSection() {
 
           {/* LINE構築 */}
           <motion.div
-            className="bg-warmWood bg-opacity-70 p-6 shadow-lg rounded-lg text-center"
+            className="bg-warmWood bg-opacity-90 p-6 shadow-lg rounded-lg text-center"
             initial={{ opacity: 0, scale: 0.8 }}
             whileInView={{ opacity: 0.9, scale: 1 }}
             transition={{ duration: 0.6, ease: "easeOut" }}
@@ -86,7 +86,7 @@ export default function ServicesSection() {
 
           {/* 動画制作 */}
           <motion.div
-            className="bg-warmWood bg-opacity-70 p-6 shadow-lg rounded-lg text-center"
+            className="bg-warmWood bg-opacity-90 p-6 shadow-lg rounded-lg text-center"
             initial={{ opacity: 0, scale: 0.8 }}
             whileInView={{ opacity: 0.9, scale: 1 }}
             transition={{ duration: 0.6, ease: "easeOut" }}
