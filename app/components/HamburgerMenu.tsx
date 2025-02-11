@@ -19,14 +19,6 @@ export default function HamburgerMenu() {
         <ul className="absolute top-full left-0 w-full bg-black bg-opacity-90 text-center md:hidden">
           <li>
             <Link
-              href="/"
-              className="block py-2 text-white hover:text-gray-300 hover:underline"
-            >
-              Top
-            </Link>
-          </li>
-          <li>
-            <Link
               href="/about"
               className="block py-2 text-white hover:text-gray-300 hover:underline"
             >

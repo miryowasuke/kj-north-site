@@ -5,17 +5,11 @@ export default function Header() {
   return (
     <header className="fixed top-0 left-0 w-full z-20 bg-black bg-opacity-70">
       <nav className="container mx-auto flex justify-between items-center py-4 px-8">
-        <div className="text-white text-lg font-bold drop-shadow-md">
+        <Link href="/" className="text-white text-lg font-bold drop-shadow-md">
           KJ-NORTH
-        </div>
+        </Link>
         <div>
           <div className="hidden md:flex space-x-4">
-            <Link
-              href="/"
-              className="text-white hover:text-gray-300 hover:underline"
-            >
-              Top
-            </Link>
             <Link
               href="/about"
               className="text-white hover:text-gray-300 hover:underline"
