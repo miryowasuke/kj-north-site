@@ -16,7 +16,7 @@ export default function HeroSection() {
 
   return (
     <section className="relative h-screen flex flex-col items-center justify-center overflow-hidden">
-      {/* 🎥 背景動画 */}
+      {/* 背景動画 */}
       <motion.div
         initial={{ filter: "blur(10px)" }}
         animate={{ filter: "blur(0px)" }}
@@ -41,7 +41,7 @@ export default function HeroSection() {
         transition={{ duration: 1.5, ease: "easeOut", delay: 1 }}
         className="relative z-10 text-center text-white"
       >
-        <h1 className="text-6xl font-bold uppercase tracking-wide mb-4 text-white drop-shadow-lg">
+        <h1 className="text-4xl md:text-6xl font-bold uppercase tracking-wide mb-4 text-white drop-shadow-lg">
           伝わるデザインを提案
         </h1>
         <p className="text-2xl font-light text-ivoryWhite p-2 rounded-lg">

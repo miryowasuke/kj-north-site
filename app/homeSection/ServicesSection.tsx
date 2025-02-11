@@ -34,24 +34,24 @@ export default function ServicesSection() {
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
           {/* HP制作 */}
           <motion.div
-            className="bg-stoneGray p-6 shadow-lg rounded text-center"
+            className="bg-warmWood bg-opacity-70 p-6 shadow-lg rounded-lg text-center"
             initial={{ opacity: 0, scale: 0.8 }}
-            whileInView={{ opacity: 1, scale: 1 }}
+            whileInView={{ opacity: 0.9, scale: 1 }}
             transition={{ duration: 0.6, ease: "easeOut" }}
             viewport={{ once: true }}
           >
-            <div className="relative w-full h-40 overflow-hidden">
+            <div className="relative w-full h-40 overflow-hidden rounded-lg">
               <Image
                 src="/photo/photo3.jpg"
                 alt="HP制作"
                 layout="fill"
                 objectFit="cover"
-                className="rounded-t-lg"
+                className="rounded-lg"
                 priority
               />
               <div className="absolute inset-0 bg-black opacity-20"></div>
             </div>
-            <h3 className="text-2xl font-bold mb-4 text-white">HP制作</h3>
+            <h3 className="text-3xl font-bold mt-6 mb-4 text-white">HP制作</h3>
             <p className="text-white">
               魅力的なデザインと高品質な技術を提供します。
             </p>
@@ -59,24 +59,26 @@ export default function ServicesSection() {
 
           {/* LINE構築 */}
           <motion.div
-            className="bg-stoneGray p-6 shadow-lg rounded text-center"
+            className="bg-warmWood bg-opacity-70 p-6 shadow-lg rounded-lg text-center"
             initial={{ opacity: 0, scale: 0.8 }}
-            whileInView={{ opacity: 1, scale: 1 }}
+            whileInView={{ opacity: 0.9, scale: 1 }}
             transition={{ duration: 0.6, ease: "easeOut" }}
             viewport={{ once: true }}
           >
-            <div className="relative w-full h-40 overflow-hidden">
+            <div className="relative w-full h-40 overflow-hidden rounded-lg">
               <Image
                 src="/photo/photo23.jpg"
                 alt="LINE構築"
                 layout="fill"
                 objectFit="cover"
-                className="rounded-t-lg"
+                className="rounded-lg"
                 priority
               />
               <div className="absolute inset-0 bg-black opacity-20"></div>
             </div>
-            <h3 className="text-2xl font-bold mb-4 text-white">LINE構築</h3>
+            <h3 className="text-3xl font-bold mt-6 mb-4 text-white">
+              LINE構築
+            </h3>
             <p className="text-white">
               SNSを活用した効率的なコミュニケーションをサポートします。
             </p>
@@ -84,24 +86,26 @@ export default function ServicesSection() {
 
           {/* 動画制作 */}
           <motion.div
-            className="bg-stoneGray p-6 shadow-lg rounded text-center"
+            className="bg-warmWood bg-opacity-70 p-6 shadow-lg rounded-lg text-center"
             initial={{ opacity: 0, scale: 0.8 }}
-            whileInView={{ opacity: 1, scale: 1 }}
+            whileInView={{ opacity: 0.9, scale: 1 }}
             transition={{ duration: 0.6, ease: "easeOut" }}
             viewport={{ once: true }}
           >
-            <div className="relative w-full h-40 overflow-hidden">
+            <div className="relative w-full h-40 overflow-hidden rounded-lg">
               <Image
                 src="/photo/photo5.jpg"
                 alt="動画制作"
                 layout="fill"
                 objectFit="cover"
-                className="rounded-t-lg"
+                className="rounded-lg"
                 priority
               />
               <div className="absolute inset-0 bg-black opacity-20"></div>
             </div>
-            <h3 className="text-2xl font-bold mb-4 text-white">動画制作</h3>
+            <h3 className="text-3xl font-bold mt-6 mb-4 text-white">
+              動画制作
+            </h3>
             <p className="text-white">
               顧客のニーズに応じたプロモーション映像を制作します。
             </p>
