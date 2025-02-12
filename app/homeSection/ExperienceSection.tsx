@@ -16,7 +16,7 @@ export default function ScrollAnimation() {
   const y2 = useTransform(scrollYProgress, [0.2, 0.4], ["0%", "-100%"]);
 
   return (
-    <main ref={ref} className="relative h-[200vh] z-10">
+    <main ref={ref} className="relative h-[200vh] z-10 m-4">
       <div className="sticky top-0 h-screen flex items-center justify-center overflow-hidden">
         {/* 1枚目 - HP制作 */}
         <motion.div
