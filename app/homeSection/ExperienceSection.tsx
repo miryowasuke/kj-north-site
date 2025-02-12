@@ -16,11 +16,11 @@ export default function ScrollAnimation() {
   const y2 = useTransform(scrollYProgress, [0.2, 0.4], ["0%", "-100%"]);
 
   return (
-    <main ref={ref} className="relative h-[200vh] z-10 m-4">
+    <main ref={ref} className="relative h-[200vh] z-10">
       <div className="sticky top-0 h-screen flex items-center justify-center overflow-hidden">
-        {/* 1枚目 - 最初に表示（z-50: 一番上） */}
+        {/* 1枚目 - HP制作 */}
         <motion.div
-          className="section__inner z-50 flex items-center justify-center absolute top-0 left-0 w-full h-screen rounded-lg shadow-2xl shadow-black/50"
+          className="section__inner z-50 flex flex-col justify-end absolute top-0 left-0 w-full h-screen"
           style={{ y: y1 }}
         >
           <Image
@@ -28,17 +28,21 @@ export default function ScrollAnimation() {
             alt="Background 1"
             layout="fill"
             objectFit="cover"
-            quality={80}
-            className="rounded-lg"
+            quality={90}
           />
-          <h2 className="absolute text-white text-6xl font-bold bg-black/40 px-6 py-2 rounded-lg shadow-lg shadow-white/30">
-            HP制作
-          </h2>
+          <div className="absolute bottom-12 left-8 w-[90%] md:w-[50%] bg-darkNavy/60 backdrop-blur-md p-6 rounded-lg">
+            <h2 className="text-ivoryWhite text-4xl font-semibold tracking-wide">
+              HP制作
+            </h2>
+            <p className="text-ivoryWhite text-sm mt-2 leading-relaxed">
+              魅力的なデザインと高品質な技術を提供します。
+            </p>
+          </div>
         </motion.div>
 
-        {/* 2枚目（z-40: 1の上に重なる） */}
+        {/* 2枚目 - LINE構築 */}
         <motion.div
-          className="section__inner z-40 flex items-center justify-center absolute top-0 left-0 w-full h-screen rounded-lg shadow-2xl shadow-black/50"
+          className="section__inner z-40 flex flex-col justify-end absolute top-0 left-0 w-full h-screen"
           style={{ y: y2 }}
         >
           <Image
@@ -46,27 +50,35 @@ export default function ScrollAnimation() {
             alt="Background 2"
             layout="fill"
             objectFit="cover"
-            quality={80}
-            className="rounded-lg"
+            quality={90}
           />
-          <h2 className="absolute text-white text-6xl font-bold bg-black/40 px-6 py-2 rounded-lg shadow-lg shadow-white/30">
-            動画制作
-          </h2>
+          <div className="absolute bottom-12 left-8 w-[90%] md:w-[50%] bg-warmWood/60 backdrop-blur-md p-6 rounded-lg">
+            <h2 className="text-ivoryWhite text-4xl font-semibold tracking-wide">
+              LINE構築
+            </h2>
+            <p className="text-ivoryWhite text-sm mt-2 leading-relaxed">
+              SNSを活用した効率的なコミュニケーションをサポートします。
+            </p>
+          </div>
         </motion.div>
 
-        {/* 3枚目（z-30: 2の上に重なる） */}
-        <motion.div className="section__inner z-30 flex items-center justify-center absolute top-0 left-0 w-full h-screen rounded-lg shadow-2xl shadow-black/50">
+        {/* 3枚目 - 動画制作 */}
+        <motion.div className="section__inner z-30 flex flex-col justify-end absolute top-0 left-0 w-full h-screen">
           <Image
             src="/photo/photo3.jpg"
             alt="Background 3"
             layout="fill"
             objectFit="cover"
-            quality={80}
-            className="rounded-lg"
+            quality={90}
           />
-          <h2 className="absolute text-white text-6xl font-bold bg-black/40 px-6 py-2 rounded-lg shadow-lg shadow-white/30">
-            LINE構築
-          </h2>
+          <div className="absolute bottom-12 left-8 w-[90%] md:w-[50%] bg-darkNavy/60 backdrop-blur-md p-6 rounded-lg">
+            <h2 className="text-ivoryWhite text-4xl font-semibold tracking-wide">
+              動画制作
+            </h2>
+            <p className="text-ivoryWhite text-sm mt-2 leading-relaxed">
+              顧客のニーズに応じたプロモーション映像を制作します。
+            </p>
+          </div>
         </motion.div>
       </div>
     </main>
