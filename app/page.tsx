@@ -7,10 +7,11 @@ import NewsSection from "./homeSection/NewsSection";
 import ContactSection from "./homeSection/ContactSection";
 import HeroSection from "./homeSection/HeroSection";
 import BackgroundVideoSection from "./homeSection/BackgroundVideoSection";
+import ExperienceSection from "./homeSection/ExperienceSection";
 
 export default function Home() {
   return (
-    <main className="bg-black text-white min-h-3 relative">
+    <main className="bg-black text-white min-h-screen relative">
       <HeroSection />
 
       <section className="relative z-10">
@@ -18,7 +19,7 @@ export default function Home() {
       </section>
 
       {/* 背景動画用のスペース（透明エリア） */}
-      <section className="relative h-[30vh] bg-transparent z-0">
+      <section className="relative h-[40vh] bg-transparent z-0">
         {/* 背景動画を固定 */}
         <BackgroundVideoSection />
       </section>
@@ -27,12 +28,16 @@ export default function Home() {
         <ServicesSection />
       </section>
 
+      <section>
+        <ExperienceSection />
+      </section>
+
       <section className="relative z-10">
         <WorksSection />
       </section>
 
       {/* 背景動画用のスペース（透明エリア） */}
-      <section className="relative h-[30vh] bg-transparent z-0">
+      <section className="relative h-[40vh] bg-transparent z-0">
         {/* 背景動画を固定 */}
         <BackgroundVideoSection />
       </section>
