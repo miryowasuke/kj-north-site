@@ -52,7 +52,7 @@ export default function ScrollAnimation() {
             objectFit="cover"
             quality={90}
           />
-          <div className="absolute bottom-12 left-8 w-[90%] md:w-[50%] bg-warmWood/60 backdrop-blur-md p-6 rounded-lg">
+          <div className="absolute bottom-12 right-8 w-[90%] md:w-[50%] bg-warmWood/60 backdrop-blur-md p-6 rounded-lg">
             <h2 className="text-ivoryWhite text-4xl font-semibold tracking-wide">
               LINE構築
             </h2>
