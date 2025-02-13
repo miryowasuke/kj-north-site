@@ -2,7 +2,7 @@ import React from "react";
 
 const News = () => {
   return (
-    <div className="min-h-screen bg-gray-100 py-10">
+    <div className="flex flex-col flex-grow min-h-screen bg-gray-100 p-8">
       <div className="container mx-auto px-4">
         <h1 className="text-4xl font-bold text-center mb-8 text-gray-800">
           News
