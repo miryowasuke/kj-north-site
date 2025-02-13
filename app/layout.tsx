@@ -8,11 +8,12 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html lang="ja">
-      <body>
-        {/* header */}
+    <html lang="ja" className="scroll-smooth">
+      <body className="bg-gray-100 text-gray-900">
+        {/* Header */}
         <Header />
-        <main>{children}</main>
+        {/* Main Content */}
+        <main className="pt-16">{children}</main>
         {/* Footer */}
         <Footer />
       </body>
