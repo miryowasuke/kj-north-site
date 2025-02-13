@@ -9,7 +9,7 @@ export default function RootLayout({
 }) {
   return (
     <html lang="ja" className="scroll-smooth">
-      <body className="bg-gray-100 text-gray-900">
+      <body className="bg-black text-gray-900">
         {/* Header */}
         <Header />
         {/* Main Content */}
