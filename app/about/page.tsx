@@ -1,7 +1,7 @@
 export default function About() {
   return (
     <div className="container mx-auto p-8">
-      <h1 className="text-3xl font-bold text-center mb-8">会社情報</h1>
+      <h1 className="text-3xl font-bold text-center mb-8">About</h1>
       <p className="text-lg text-gray-700">
         KJ-NORTHは、映像制作、LINEアカウント運用、ホームページ制作を手掛けるクリエイティブ企業です。
       </p>
