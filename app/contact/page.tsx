@@ -1,50 +1,95 @@
 export default function Contact() {
   return (
-    <div className="flex flex-col flex-grow min-h-screen bg-gray-100 p-8">
-      <h1 className="text-3xl font-bold text-center mb-8">Contact</h1>
-      <form className="space-y-4">
+    <div className="relative flex flex-col flex-grow min-h-screen bg-gradient-to-b from-darkNavy to-black text-ivoryWhite px-4 py-8">
+      <h1 className="text-5xl font-bold text-center mb-8 text-ivoryWhite underline">
+        Contact
+      </h1>
+      <p className="text-center text-sm text-ivoryWhite mb-4">
+        * は必須項目になりますので必ず入力してください。
+      </p>
+      <form className="space-y-6 max-w-2xl w-full mx-auto">
+        {/* お問い合わせの種類 */}
         <div>
-          <label
-            htmlFor="name"
-            className="block text-lg font-medium text-gray-700"
-          >
-            お名前
+          <label className="block text-lg font-medium mb-2">
+            お問い合わせの種類
           </label>
+          <select className="w-full bg-transparent border border-white p-2 rounded-md">
+            <option>- 選択してください -</option>
+            <option>HP制作</option>
+            <option>LINE構築</option>
+            <option>動画制作</option>
+            <option>その他</option>
+          </select>
+        </div>
+
+        {/* 名前 */}
+        <div>
+          <label className="block text-lg font-medium mb-2">お名前 *</label>
           <input
-            id="name"
             type="text"
-            className="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-blue-500 focus:ring-blue-500"
+            placeholder="例：山田 太郎"
+            className="w-full bg-transparent border border-white p-2 rounded-md"
           />
         </div>
+
+        {/* フリガナ */}
         <div>
-          <label
-            htmlFor="email"
-            className="block text-lg font-medium text-gray-700"
-          >
-            メールアドレス
+          <label className="block text-lg font-medium mb-2">フリガナ *</label>
+          <input
+            type="text"
+            placeholder="例：ヤマダ タロウ"
+            className="w-full bg-transparent border border-white p-2 rounded-md"
+          />
+        </div>
+
+        {/* 会社名 */}
+        <div>
+          <label className="block text-lg font-medium mb-2">会社名</label>
+          <input
+            type="text"
+            placeholder="例：株式会社KJ NORTH"
+            className="w-full bg-transparent border border-white p-2 rounded-md"
+          />
+        </div>
+
+        {/* メールアドレス */}
+        <div>
+          <label className="block text-lg font-medium mb-2">
+            メールアドレス *
           </label>
           <input
-            id="email"
             type="email"
-            className="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-blue-500 focus:ring-blue-500"
+            placeholder="例：info@kj-north.jp"
+            className="w-full bg-transparent border border-white p-2 rounded-md"
           />
         </div>
+
+        {/* 電話番号 */}
         <div>
-          <label
-            htmlFor="message"
-            className="block text-lg font-medium text-gray-700"
-          >
-            メッセージ
+          <label className="block text-lg font-medium mb-2">電話番号 *</label>
+          <input
+            type="tel"
+            placeholder="例：000-0000-0000"
+            className="w-full bg-transparent border border-white p-2 rounded-md"
+          />
+        </div>
+
+        {/* お問い合わせ内容 */}
+        <div>
+          <label className="block text-lg font-medium mb-2">
+            お問い合わせ内容 *
           </label>
           <textarea
-            id="message"
+            placeholder="こちらにご記入ください。"
             rows={4}
-            className="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-blue-500 focus:ring-blue-500"
+            className="w-full bg-transparent border border-white p-2 rounded-md"
           ></textarea>
         </div>
+
+        {/* 送信ボタン */}
         <button
           type="submit"
-          className="w-full bg-blue-500 text-white py-2 px-4 rounded-md hover:bg-blue-600"
+          className="w-full bg-white text-black py-2 px-4 rounded-md hover:bg-gray-300"
         >
           送信
         </button>
