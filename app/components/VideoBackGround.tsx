@@ -14,7 +14,10 @@ export default function VideoBackground() {
       autoPlay
       loop
       muted
-      className="absolute inset-0 w-full h-full object-cover"
+      playsInline
+      preload="auto"
+      className="absolute inset-0 w-full h-full object-cover object-center"
+      style={{ imageRendering: "crisp-edges" }}
     >
       <source src="/video/background_video.mp4" type="video/mp4" />
     </video>
