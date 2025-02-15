@@ -1,64 +1,78 @@
 "use client";
-import { useState } from "react";
+import { useState, useEffect, useRef } from "react";
 import Link from "next/link";
+
+const menuItems = [
+  { name: "About", path: "/about" },
+  { name: "Services", path: "/services" },
+  { name: "Works", path: "/works" },
+  { name: "News", path: "/news" },
+  { name: "Contact", path: "/contact" },
+];
 
 export default function HamburgerMenu() {
   const [isOpen, setIsOpen] = useState(false);
+  const menuRef = useRef<HTMLDivElement>(null);
+  const buttonRef = useRef<HTMLButtonElement>(null);
+
+  useEffect(() => {
+    const handleClickOutside = (event: MouseEvent | TouchEvent) => {
+      if (
+        menuRef.current &&
+        !menuRef.current.contains(event.target as Node) &&
+        buttonRef.current &&
+        !buttonRef.current.contains(event.target as Node)
+      ) {
+        setIsOpen(false);
+      }
+    };
+
+    if (isOpen) {
+      document.addEventListener("mousedown", handleClickOutside);
+      document.addEventListener("touchstart", handleClickOutside);
+    } else {
+      document.removeEventListener("mousedown", handleClickOutside);
+      document.removeEventListener("touchstart", handleClickOutside);
+    }
+
+    return () => {
+      document.removeEventListener("mousedown", handleClickOutside);
+      document.removeEventListener("touchstart", handleClickOutside);
+    };
+  }, [isOpen]);
 
   return (
     <div>
-      {/* ハンバーガーボタン */}
+      {/* ✅ ハンバーガーボタン */}
       <button
-        className="block md:hidden text-white"
+        ref={buttonRef}
+        className="block md:hidden text-white text-2xl p-3  rounded-md shadow-lg"
         onClick={() => setIsOpen(!isOpen)}
       >
         ☰
       </button>
-      {/* メニュー */}
-      {isOpen && (
-        <ul className="absolute top-full left-0 w-full bg-black bg-opacity-90 text-center md:hidden">
-          <li>
-            <Link
-              href="/about"
-              className="block py-2 text-white hover:text-gray-300 hover:underline"
-            >
-              About
-            </Link>
-          </li>
-          <li>
-            <Link
-              href="/services"
-              className="block py-2 text-white hover:text-gray-300 hover:underline"
-            >
-              Services
-            </Link>
-          </li>
-          <li>
-            <Link
-              href="/works"
-              className="block py-2 text-white hover:text-gray-300 hover:underline"
-            >
-              Works
-            </Link>
-          </li>
 
-          <li>
-            <Link
-              href="/news"
-              className="text-white hover:text-gray-300 hover:underline"
-            >
-              News
-            </Link>
-          </li>
-          <li>
-            <Link
-              href="/contact"
-              className="block py-2 text-white hover:text-gray-300 hover:underline"
-            >
-              Contact
-            </Link>
-          </li>
-        </ul>
+      {/* ✅ メニュー */}
+      {isOpen && (
+        <div
+          ref={menuRef}
+          className="absolute top-full left-0 w-full bg-black text-center md:hidden shadow-lg rounded-b-md"
+        >
+          <ul>
+            {menuItems.map((item) => (
+              <li key={item.name}>
+                <Link
+                  href={item.path}
+                  className="block py-3 text-ivoryWhite hover:bg-warmWood transition-colors duration-300"
+                  onClick={() => setIsOpen(false)}
+                >
+                  {item.name}
+                </Link>
+                <hr className="border-ivoryWhite/50 w-4/5 mx-auto mb-4" />
+              </li>
+            ))}
+          </ul>
+        </div>
       )}
     </div>
   );
