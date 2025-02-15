@@ -13,7 +13,7 @@ export default function RootLayout({
         {/* Header */}
         <Header />
         {/* Main Content */}
-        <main className="pt-16">{children}</main>
+        <main className="pt-14">{children}</main>
         {/* Footer */}
         <Footer />
       </body>
