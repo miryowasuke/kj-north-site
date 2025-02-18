@@ -1,5 +1,3 @@
-import { motion } from "framer-motion";
-
 export default function Contact() {
   return (
     <div className="relative flex flex-col flex-grow min-h-screen bg-gradient-to-b from-darkNavy to-black text-ivoryWhite px-4 py-8">
