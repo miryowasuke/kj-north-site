@@ -16,8 +16,9 @@ const News = () => {
 
       <div className="relative container mx-auto px-4">
         {/* 🔹 Newsタイトルを中央に配置 & 白色に設定 */}
-        <h1 className="text-3xl font-bold mb-8 text-center text-white">News</h1>
-
+        <h1 className="text-5xl md:text-6xl font-bold text-center mb-12 text-ivoryWhite ">
+          News
+        </h1>
         <ul className="space-y-6">
           {newsData.map((news) => (
             <li

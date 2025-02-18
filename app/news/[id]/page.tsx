@@ -27,8 +27,11 @@ export default function NewsDetail() {
 
       {/* 🔹 記事コンテンツ */}
       <div className="relative z-10 container mx-auto px-6 py-12 max-w-3xl">
+        <h1 className="text-5xl md:text-6xl font-bold text-center mb-12 text-ivoryWhite ">
+          News
+        </h1>
         {/* タイトル */}
-        <h1 className="text-3xl font-bold text-warmWood mb-4">{news.title}</h1>
+        <h2 className="text-3xl font-bold text-warmWood mb-4">{news.title}</h2>
 
         {/* 日付 & カテゴリ */}
         <p className="text-sm text-gray-300 mb-6">
