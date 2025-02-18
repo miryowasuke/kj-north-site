@@ -1,7 +1,9 @@
+import { motion } from "framer-motion";
+
 export default function Contact() {
   return (
     <div className="relative flex flex-col flex-grow min-h-screen bg-gradient-to-b from-darkNavy to-black text-ivoryWhite px-4 py-8">
-      <h1 className="text-5xl font-bold text-center mb-8 text-ivoryWhite underline">
+      <h1 className="text-5xl md:text-6xl font-bold text-center mb-12">
         Contact
       </h1>
       <p className="text-center text-sm text-ivoryWhite mb-4">
