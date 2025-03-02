@@ -2,6 +2,9 @@
 import React, { useEffect, useState } from "react";
 import { motion } from "framer-motion";
 import Image from "next/image";
+import CompanyInfo from "../components/CompanyInfo";
+import GoogleMap from "../components/GoogleMap";
+import ContactSection from "../homeSection/ContactSection";
 
 export default function About() {
   const [isClient, setIsClient] = useState(false);
@@ -101,30 +104,14 @@ export default function About() {
           </div>
         </div>
         {/* 🔹 会社概要セクション */}
-        <div className="container mx-auto px-4 mt-24 relative z-10">
-          <motion.div
-            initial={{ opacity: 0, y: 50 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 1, ease: "easeOut" }}
-            viewport={{ once: true }}
-            className="bg-white shadow-md rounded-lg p-8 border-l-4 border-warmWood"
-          >
-            <h2 className="text-4xl font-bold mb-4 text-darkNavy">会社概要</h2>
-            <p className="text-lg text-darkNavy">
-              <strong>会社名:</strong> 株式会社KJ NORTH
-              <br />
-              <strong>所在地:</strong> 〒063-0811 札幌市西区琴似1条2丁目6-8-804
-              <br />
-              <strong>TEL:</strong> 011-795-2051
-              <br />
-              <strong>営業時間:</strong> 10:00～18:00
-              <br />
-              <strong>定休日:</strong> 土日祝
-              <br />
-              <strong>駐車場:</strong>{" "}
-              ありません。お近くのコインパーキングをご利用ください。
-            </p>
-          </motion.div>
+        <CompanyInfo />
+        <div className="flex py-20">
+          <div className="w-1/2">
+            <GoogleMap />
+          </div>
+          <div className="w-1/2 ml-5">
+            <ContactSection />
+          </div>
         </div>
       </div>
     </div>
