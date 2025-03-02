@@ -11,7 +11,14 @@ export default function About() {
   }, []);
 
   return (
-    <section className="relative py-40 min-h-screen bg-gradient-to-b from-ivoryWhite to-gray-100 text-darkNavy overflow-hidden">
+    <div
+      className="relative min-h-screen bg-cover bg-center bg-no-repeat pt-20" // 🔹 ヘッダー分の余白を追加
+      style={{
+        backgroundImage: "url('/photo/photo23.jpg')",
+      }}
+    >
+      {/* ✨ 背景オーバーレイ */}
+      <div className="absolute inset-0 bg-white/50 backdrop-blur-md"></div>
       {/* 🔹 メインコンテンツ */}
       <div className="container mx-auto px-6 md:px-16 lg:px-32 relative z-10">
         {/* 🔹 タイトル */}
@@ -40,16 +47,15 @@ export default function About() {
             className="max-w-4xl mx-auto text-center md:text-left"
           >
             <h3 className="text-4xl font-semibold mb-5 leading-snug">
-              <span className="text-darkNavy">過度じゃない、</span>
+              <span className="text-darkNavy">過度じゃない</span>
               <br />
-              <span className="text-warmWood">ちょうどよいデザイン</span>
+              <span className="text-warmWood">ちょうどよい デザイン</span>
             </h3>
 
             <p className="text-xl leading-loose text-darkNavy">
-              私たちは、顧客の要求に応じて優れたウェブサイト制作と動画制作を提供しています。
-              幅広い業界での経験を活かして、顧客の問題を解決することに取り組んでいます。
+              私たちは、顧客の要求に応じて優れたウェブサイト制作と動画制作を提供しています。幅広い業界での経験を活かして、
               <br />
-              創立以来、多くの企業と協力して実績を築いてきました。
+              顧客の問題を解決することに取り組んでいます。創立以来、多くの企業と協力して実績を築いてきました。
               <br />
               私たちの目標は、静かな情熱で未来を築き、お客様のビジネスの成功を支援することです。
             </p>
@@ -121,6 +127,6 @@ export default function About() {
           </motion.div>
         </div>
       </div>
-    </section>
+    </div>
   );
 }
