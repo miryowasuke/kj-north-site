@@ -2,6 +2,9 @@
 import React, { useEffect, useState } from "react";
 import { motion } from "framer-motion";
 import Image from "next/image";
+import CompanyInfo from "../components/CompanyInfo";
+import GoogleMap from "../components/GoogleMap";
+import ContactSection from "../homeSection/ContactSection";
 
 export default function About() {
   const [isClient, setIsClient] = useState(false);
@@ -11,7 +14,14 @@ export default function About() {
   }, []);
 
   return (
-    <section className="relative py-40 min-h-screen bg-gradient-to-b from-ivoryWhite to-gray-100 text-darkNavy overflow-hidden">
+    <div
+      className="relative min-h-screen bg-cover bg-center bg-no-repeat pt-20" // 🔹 ヘッダー分の余白を追加
+      style={{
+        backgroundImage: "url('/photo/photo23.jpg')",
+      }}
+    >
+      {/* ✨ 背景オーバーレイ */}
+      <div className="absolute inset-0 bg-white/50 backdrop-blur-md"></div>
       {/* 🔹 メインコンテンツ */}
       <div className="container mx-auto px-6 md:px-16 lg:px-32 relative z-10">
         {/* 🔹 タイトル */}
@@ -37,19 +47,18 @@ export default function About() {
             initial={{ opacity: 0, x: -30 }}
             animate={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.8, ease: "easeOut" }}
-            className="max-w-4xl mx-auto text-center md:text-left"
+            className="max-w-4xl mx-auto text-left"
           >
             <h3 className="text-4xl font-semibold mb-5 leading-snug">
-              <span className="text-darkNavy">過度じゃない、</span>
+              <span className="text-darkNavy">過度じゃない</span>
               <br />
-              <span className="text-warmWood">ちょうどよいデザイン</span>
+              <span className="text-warmWood">ちょうどよい デザイン</span>
             </h3>
 
             <p className="text-xl leading-loose text-darkNavy">
-              私たちは、顧客の要求に応じて優れたウェブサイト制作と動画制作を提供しています。
-              幅広い業界での経験を活かして、顧客の問題を解決することに取り組んでいます。
+              私たちは、顧客の要求に応じて優れたウェブサイト制作と動画制作を提供しています。幅広い業界での経験を活かして、
               <br />
-              創立以来、多くの企業と協力して実績を築いてきました。
+              顧客の問題を解決することに取り組んでいます。創立以来、多くの企業と協力して実績を築いてきました。
               <br />
               私たちの目標は、静かな情熱で未来を築き、お客様のビジネスの成功を支援することです。
             </p>
@@ -95,32 +104,19 @@ export default function About() {
           </div>
         </div>
         {/* 🔹 会社概要セクション */}
-        <div className="container mx-auto px-4 mt-24 relative z-10">
-          <motion.div
-            initial={{ opacity: 0, y: 50 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 1, ease: "easeOut" }}
-            viewport={{ once: true }}
-            className="bg-white shadow-md rounded-lg p-8 border-l-4 border-warmWood"
-          >
-            <h2 className="text-4xl font-bold mb-4 text-darkNavy">会社概要</h2>
-            <p className="text-lg text-darkNavy">
-              <strong>会社名:</strong> 株式会社KJ NORTH
-              <br />
-              <strong>所在地:</strong> 〒063-0811 札幌市西区琴似1条2丁目6-8-804
-              <br />
-              <strong>TEL:</strong> 011-795-2051
-              <br />
-              <strong>営業時間:</strong> 10:00～18:00
-              <br />
-              <strong>定休日:</strong> 土日祝
-              <br />
-              <strong>駐車場:</strong>{" "}
-              ありません。お近くのコインパーキングをご利用ください。
-            </p>
-          </motion.div>
+        <CompanyInfo />
+        <div className="flex flex-col md:flex-row py-10">
+          {/* Google Map */}
+          <div className="w-full md:w-1/2">
+            <GoogleMap />
+          </div>
+
+          {/* Contact Section */}
+          <div className="w-full md:w-1/2 md:ml-5 mt-10 md:mt-0">
+            <ContactSection />
+          </div>
         </div>
       </div>
-    </section>
+    </div>
   );
 }
