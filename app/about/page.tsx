@@ -47,7 +47,7 @@ export default function About() {
             initial={{ opacity: 0, x: -30 }}
             animate={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.8, ease: "easeOut" }}
-            className="max-w-4xl mx-auto text-center md:text-left"
+            className="max-w-4xl mx-auto text-left"
           >
             <h3 className="text-4xl font-semibold mb-5 leading-snug">
               <span className="text-darkNavy">過度じゃない</span>
@@ -105,11 +105,14 @@ export default function About() {
         </div>
         {/* 🔹 会社概要セクション */}
         <CompanyInfo />
-        <div className="flex py-20">
-          <div className="w-1/2">
+        <div className="flex flex-col md:flex-row py-10">
+          {/* Google Map */}
+          <div className="w-full md:w-1/2">
             <GoogleMap />
           </div>
-          <div className="w-1/2 ml-5">
+
+          {/* Contact Section */}
+          <div className="w-full md:w-1/2 md:ml-5 mt-10 md:mt-0">
             <ContactSection />
           </div>
         </div>
