@@ -7,7 +7,7 @@ import Image from "next/image";
 
 export default function ContactSection() {
   return (
-    <section className="relative py-16 bg-white text-warmWood overflow-hidden">
+    <section className="relative py-16 bg-white text-warmWood overflow-hidden rounded-lg">
       {/* 🔹 背景画像（スクロール時に動かす） */}
       <motion.div
         style={{ backgroundImage: "url('/photo/photo10.jpg')" }}

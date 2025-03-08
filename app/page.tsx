@@ -1,7 +1,6 @@
 "use client";
 import React from "react";
 import AboutSection from "./homeSection/AboutSection";
-import ServicesSection from "./homeSection/ServicesSection";
 import WorksSection from "./homeSection/WorksSection";
 import NewsSection from "./homeSection/NewsSection";
 import ContactSection from "./homeSection/ContactSection";
@@ -22,10 +21,6 @@ export default function Home() {
       <section className="relative h-[40vh] bg-transparent z-0">
         {/* 背景動画を固定 */}
         <BackgroundVideoSection />
-      </section>
-
-      <section className="relative z-10">
-        <ServicesSection />
       </section>
 
       <section>
