@@ -6,7 +6,7 @@ import Image from "next/image";
 
 export default function AboutSection() {
   return (
-    <section className="relative py-32 bg-ivoryWhite  text-warmWood overflow-hidden">
+    <section className="relative py-32 bg-darkNavy bg-opacity-90  text-warmWood overflow-hidden">
       {/* 🔹 背景をスクロールで動かす */}
       <motion.div
         style={{ backgroundImage: "url('/photo/photo23.jpg')" }}
