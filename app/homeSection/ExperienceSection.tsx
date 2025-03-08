@@ -40,7 +40,7 @@ export default function ScrollAnimation() {
           </div>
         </motion.div>
 
-        {/* 2枚目 - LINE構築 */}
+        {/* 2枚目 - 映像制作 */}
         <motion.div
           className="section__inner z-40 flex flex-col justify-end absolute top-0 left-0 w-full h-screen"
           style={{ y: y2 }}
@@ -54,15 +54,15 @@ export default function ScrollAnimation() {
           />
           <div className="absolute bottom-12 right-8 w-[90%] md:w-[50%] bg-warmWood/60 backdrop-blur-md p-6 rounded-lg">
             <h2 className="text-ivoryWhite text-4xl font-semibold tracking-wide">
-              LINE構築
+              映像制作
             </h2>
             <p className="text-ivoryWhite text-sm mt-2 leading-relaxed">
-              SNSを活用した効率的なコミュニケーションをサポートします。
+              顧客のニーズに応じたプロモーション映像を制作します。
             </p>
           </div>
         </motion.div>
 
-        {/* 3枚目 - 動画制作 */}
+        {/* 3枚目 - LINE公式アカウント構築 */}
         <motion.div className="section__inner z-30 flex flex-col justify-end absolute top-0 left-0 w-full h-screen">
           <Image
             src="/photo/photo3.jpg"
@@ -73,10 +73,10 @@ export default function ScrollAnimation() {
           />
           <div className="absolute bottom-12 left-8 w-[90%] md:w-[50%] bg-darkNavy/60 backdrop-blur-md p-6 rounded-lg">
             <h2 className="text-ivoryWhite text-4xl font-semibold tracking-wide">
-              動画制作
+              LINE公式アカウント構築
             </h2>
             <p className="text-ivoryWhite text-sm mt-2 leading-relaxed">
-              顧客のニーズに応じたプロモーション映像を制作します。
+              SNSを活用した効率的なコミュニケーションをサポートします。
             </p>
           </div>
         </motion.div>

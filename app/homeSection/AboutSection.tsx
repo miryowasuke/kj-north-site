@@ -6,7 +6,7 @@ import Image from "next/image";
 
 export default function AboutSection() {
   return (
-    <section className="relative py-32 bg-darkNavy bg-opacity-90  text-warmWood overflow-hidden">
+    <section className="relative py-32 bg-neutralGray   text-white overflow-hidden">
       {/* 🔹 背景をスクロールで動かす */}
       <motion.div
         style={{ backgroundImage: "url('/photo/photo23.jpg')" }}
@@ -28,7 +28,7 @@ export default function AboutSection() {
               initial={{ scaleX: 0 }}
               animate={{ scaleX: 1 }}
               transition={{ duration: 1, ease: "easeOut" }}
-              className="absolute bottom-0 left-0 w-full h-[4px] bg-warmWood origin-left"
+              className="absolute bottom-0 left-0 w-full h-[4px] bg-white origin-left"
             />
           </h2>
 

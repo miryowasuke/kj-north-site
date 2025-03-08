@@ -86,7 +86,7 @@ export default function WorksSection() {
   };
 
   return (
-    <section className="relative py-16 bg-white text-warmWood overflow-hidden">
+    <section className="relative py-16 bg-neutralGray text-white overflow-hidden">
       {/* 🔹 背景画像（スクロール時に動くエフェクト） */}
       <motion.div
         style={{ backgroundImage: "url('/photo/photo20.jpg')" }}
@@ -111,7 +111,7 @@ export default function WorksSection() {
             initial={{ scaleX: 0 }}
             animate={{ scaleX: 1 }}
             transition={{ duration: 1, ease: "easeOut" }}
-            className="absolute bottom-0 left-0 w-full h-[4px] bg-warmWood origin-left"
+            className="absolute bottom-0 left-0 w-full h-[4px] bg-white origin-left"
           />
         </motion.h2>
 
