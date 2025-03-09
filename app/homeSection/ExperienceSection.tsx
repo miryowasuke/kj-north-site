@@ -18,7 +18,7 @@ export default function ScrollAnimation() {
   return (
     <main ref={ref} className="relative h-[200vh] z-10 m-4">
       <div className="sticky top-0 h-screen flex items-center justify-center overflow-hidden">
-        {/* 1枚目 - HP制作 */}
+        {/* 1枚目 - Web制作 */}
         <motion.div
           className="section__inner z-50 flex flex-col justify-end absolute top-0 left-0 w-full h-screen"
           style={{ y: y1 }}
@@ -32,7 +32,7 @@ export default function ScrollAnimation() {
           />
           <div className="absolute bottom-12 left-8 w-[90%] md:w-[50%] bg-darkNavy/60 backdrop-blur-md p-6 rounded-lg">
             <h2 className="text-ivoryWhite text-4xl font-semibold tracking-wide">
-              HP制作
+              Web制作
             </h2>
             <p className="text-ivoryWhite text-sm mt-2 leading-relaxed">
               魅力的なデザインと高品質な技術を提供します。
