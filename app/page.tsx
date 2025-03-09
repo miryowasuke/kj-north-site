@@ -17,12 +17,6 @@ export default function Home() {
         <AboutSection />
       </section>
 
-      {/* 背景動画用のスペース（透明エリア） */}
-      <section className="relative h-[40vh] bg-transparent z-0">
-        {/* 背景動画を固定 */}
-        <BackgroundVideoSection />
-      </section>
-
       <section>
         <ExperienceSection />
       </section>
