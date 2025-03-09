@@ -7,54 +7,9 @@ import Image from "next/image";
 
 export default function ContactSection() {
   return (
-    <section className="relative py-16 bg-neutralGray text-warmWood overflow-hidden rounded-lg">
-      {/* 🔹 背景画像（スクロール時に動かす） */}
-      <motion.div
-        style={{ backgroundImage: "url('/photo/photo10.jpg')" }}
-        className="absolute inset-0 bg-cover bg-center opacity-20"
-        initial={{ y: 50 }}
-        whileInView={{ y: 0 }}
-        transition={{ duration: 1, ease: "easeOut" }}
-        viewport={{ once: true }}
-      />
-
+    <section className="relative py-16 text-warmWood overflow-hidden rounded-lg">
       <div className="container mx-auto px-4 grid grid-cols-1 md:grid-cols-2 gap-8 items-center relative z-10">
-        {/* 左側：テキストコンテンツ */}
-        <div className="relative w-full h-[450px]">
-          {/* 1枚目（大きい画像） */}
-          <motion.div
-            initial={{ opacity: 0, y: 40 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8, ease: "easeOut" }}
-            viewport={{ once: true }}
-            className="absolute top-0 left-0 w-[65%] h-[70%] rounded-lg shadow-lg overflow-hidden border-ivoryWhite border-[4px] rotate-[-3deg]"
-          >
-            <Image
-              src="/photo/photo10.jpg"
-              alt="お問い合わせ"
-              layout="fill"
-              objectFit="cover"
-              className="rounded-lg"
-            />
-          </motion.div>
-
-          {/* 2枚目（小さい画像） */}
-          <motion.div
-            initial={{ opacity: 0, y: 50 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 1, ease: "easeOut", delay: 0.2 }}
-            viewport={{ once: true }}
-            className="absolute bottom-0 right-0 w-[50%] h-[60%] rounded-lg shadow-lg overflow-hidden border-ivoryWhite border-[4px] rotate-[3deg]"
-          >
-            <Image
-              src="/photo/photo11.jpg"
-              alt="オフィス風景"
-              layout="fill"
-              objectFit="cover"
-              className="rounded-lg"
-            />
-          </motion.div>
-        </div>
+        <div />
         {/* 右側：背景画像（2枚配置） */}
         <motion.div
           initial={{ opacity: 0, x: -50 }}

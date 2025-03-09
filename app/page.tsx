@@ -10,7 +10,7 @@ import ExperienceSection from "./homeSection/ExperienceSection";
 
 export default function Home() {
   return (
-    <main className="bg-black text-white min-h-screen relative">
+    <main className="flex-col bg-black text-white min-h-screen relative">
       <HeroSection />
 
       <section className="relative z-10">
@@ -31,11 +31,8 @@ export default function Home() {
         <WorksSection />
       </section>
 
-      <section className="relative z-10">
+      <section className="flex flex-col backdrop-blur-md py-5 w-full h-screen items-center justify-center">
         <NewsSection />
-      </section>
-
-      <section className="relative z-10">
         <ContactSection />
       </section>
     </main>
