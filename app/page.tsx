@@ -10,17 +10,11 @@ import ExperienceSection from "./homeSection/ExperienceSection";
 
 export default function Home() {
   return (
-    <main className="bg-black text-white min-h-screen relative">
+    <main className="flex-col bg-black text-white min-h-screen relative">
       <HeroSection />
 
       <section className="relative z-10">
         <AboutSection />
-      </section>
-
-      {/* 背景動画用のスペース（透明エリア） */}
-      <section className="relative h-[40vh] bg-transparent z-0">
-        {/* 背景動画を固定 */}
-        <BackgroundVideoSection />
       </section>
 
       <section>
@@ -37,11 +31,8 @@ export default function Home() {
         <WorksSection />
       </section>
 
-      <section className="relative z-10">
+      <section className="flex flex-col backdrop-blur-md py-5 w-full h-screen items-center justify-center">
         <NewsSection />
-      </section>
-
-      <section className="relative z-10">
         <ContactSection />
       </section>
     </main>

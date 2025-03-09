@@ -86,7 +86,7 @@ export default function WorksSection() {
   };
 
   return (
-    <section className="relative py-16 bg-neutralGray text-white overflow-hidden">
+    <section className="flex relative py-16 bg-gradient-to-b from-darkNavy to-black text-white overflow-hidden w-full h-screen items-center justify-center">
       {/* 🔹 背景画像（スクロール時に動くエフェクト） */}
       <motion.div
         style={{ backgroundImage: "url('/photo/photo20.jpg')" }}
@@ -97,7 +97,7 @@ export default function WorksSection() {
         viewport={{ once: true }}
       />
 
-      <div className="container mx-auto px-4 text-center relative z-10">
+      <div className="container mx-auto px-4 text-center relative z-10 items-center justify-center">
         {/* 🔹 タイトルにラインアニメーション */}
         <motion.h2
           initial={{ opacity: 0, y: -20 }}

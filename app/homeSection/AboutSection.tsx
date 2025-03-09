@@ -6,22 +6,24 @@ import Image from "next/image";
 
 export default function AboutSection() {
   return (
-    <section className="relative py-32 bg-neutralGray   text-white overflow-hidden">
+    <section className="bg-neutralGray w-full h-screen">
       {/* 🔹 背景をスクロールで動かす */}
       <motion.div
-        style={{ backgroundImage: "url('/photo/photo23.jpg')" }}
-        className="absolute inset-0 bg-cover bg-center opacity-20 "
+        style={{
+          backgroundImage: "url('/photo/photo23.jpg')",
+        }}
+        className="absolute inset-0 bg-cover bg-center opacity-20"
       />
 
-      <div className="container mx-auto px-4 grid grid-cols-1 md:grid-cols-2 gap-16 items-center relative z-10">
+      <div className="container mx-auto px-4 grid grid-cols-1 md:grid-cols-2 gap-16 items-center justify-center relative z-10 h-full">
         {/* 🔹 左側テキストエリア */}
         <motion.div
           initial={{ opacity: 0, x: -50 }}
           whileInView={{ opacity: 1, x: 0 }}
           transition={{ duration: 0.8, ease: "easeOut" }}
           viewport={{ once: true }}
+          className="flex flex-col justify-center"
         >
-          {/* 🔹 ラインアニメーション付きタイトル */}
           <h2 className="text-5xl font-bold mb-6 relative inline-block">
             About
             <motion.div
@@ -50,7 +52,7 @@ export default function AboutSection() {
         </motion.div>
 
         {/* 🔹 右側：2枚の画像を表示 */}
-        <div className="relative w-full h-[450px]">
+        <div className="relative w-full h-[450px] flex items-center justify-center">
           {/* 1枚目（大きい画像） */}
           <motion.div
             initial={{ opacity: 0, y: 40 }}
