@@ -6,7 +6,7 @@ import Image from "next/image";
 
 export default function AboutSection() {
   return (
-    <section className="bg-neutralGray w-full h-screen">
+    <section className=" w-full h-screen bg-gradient-to-b from-neutralGray to-black">
       {/* 🔹 背景をスクロールで動かす */}
       <motion.div
         style={{
