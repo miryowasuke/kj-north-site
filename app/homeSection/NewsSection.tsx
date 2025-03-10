@@ -1,11 +1,21 @@
+"use client";
+
 import React from "react";
 import Link from "next/link";
 
 export default function NewsSection() {
   return (
-    <section className="container mx-auto px-4 grid grid-cols-1 md:grid-cols-2 gap-8 items-center relative z-10">
-      <div className="container mx-auto px-4">
-        <h2 className="text-5xl font-bold mb-8 text-center underline">News</h2>
+    <section className="group relative container mx-auto px-4 grid grid-cols-1 md:grid-cols-2 gap-8 items-center overflow-hidden">
+      {/* ホバー時スライド背景 */}
+      <div
+        className="absolute top-0 right-0 w-full md:w-1/2 h-full bg-gradient-to-b from-darkNavy to-black 
+                  -translate-y-full group-hover:translate-y-0 
+                  transition-transform duration-500 pointer-events-none z-0"
+      />
+
+      {/* 実際のコンテンツ */}
+      <div className="relative z-10">
+        <h2 className="text-5xl font-bold mb-8 text-left underline">News</h2>
         <ul className="space-y-4">
           <li className="flex justify-start border-b pb-2">
             <span className="text-white pr-2">2025.01.22</span>

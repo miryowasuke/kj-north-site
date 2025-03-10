@@ -10,7 +10,7 @@ export default function AboutSection() {
       {/* 🔹 背景をスクロールで動かす */}
       <motion.div
         style={{
-          backgroundImage: "url('/photo/photo23.jpg')",
+          backgroundImage: "url('/photo/photo20.jpg')",
         }}
         className="absolute inset-0 bg-cover bg-center opacity-20"
       />
