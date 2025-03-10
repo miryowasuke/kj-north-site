@@ -3,20 +3,21 @@
 import { useRef } from "react";
 import { motion, useScroll, useTransform } from "framer-motion";
 import Image from "next/image";
+import Link from "next/link";
 
 export default function ScrollAnimation() {
   const ref = useRef(null);
   const { scrollYProgress } = useScroll({
     target: ref,
-    offset: ["start start", "end start"], // スクロールの開始と終了を調整
+    offset: ["start start", "end start"],
   });
 
-  // 各セクションのスクロールに応じたY軸の移動量（順番に表示されるように調整）
-  const y1 = useTransform(scrollYProgress, [0.0, 0.2], ["0%", "-100%"]);
-  const y2 = useTransform(scrollYProgress, [0.2, 0.4], ["0%", "-100%"]);
+  const y1 = useTransform(scrollYProgress, [0.0, 0.3], ["0%", "-100%"]);
+  const y2 = useTransform(scrollYProgress, [0.25, 0.5], ["0%", "-100%"]);
+  const y3 = useTransform(scrollYProgress, [0.5, 0.75], ["0%", "-100%"]);
 
   return (
-    <main ref={ref} className="relative h-[200vh] z-10 m-4">
+    <main ref={ref} className="relative h-[500vh] z-10 m-4">
       <div className="sticky top-0 h-screen flex items-center justify-center overflow-hidden">
         {/* 1枚目 - Web制作 */}
         <motion.div
@@ -63,7 +64,10 @@ export default function ScrollAnimation() {
         </motion.div>
 
         {/* 3枚目 - LINE公式アカウント構築 */}
-        <motion.div className="section__inner z-30 flex flex-col justify-end absolute top-0 left-0 w-full h-screen">
+        <motion.div
+          className="section__inner z-30 absolute top-0 left-0 w-full h-screen flex flex-col justify-end"
+          style={{ y: y3 }}
+        >
           <Image
             src="/photo/photo3.jpg"
             alt="Background 3"
@@ -78,6 +82,34 @@ export default function ScrollAnimation() {
             <p className="text-ivoryWhite text-sm mt-2 leading-relaxed">
               SNSを活用した効率的なコミュニケーションをサポートします。
             </p>
+          </div>
+        </motion.div>
+
+        {/* 4枚目 - サービスタイトルと詳細ボタン */}
+        <motion.div className="section__inner z-20 absolute top-0 left-0 w-full h-screen flex flex-col items-center justify-center">
+          <Image
+            src="/photo/photo4.jpg"
+            alt="Background 4"
+            layout="fill"
+            objectFit="cover"
+            quality={90}
+          />
+          {/* 背景グラデーションを追加 */}
+          <div className="absolute inset-0 bg-gradient-to-b from-neutralGray to-black opacity-70 z-10" />
+
+          <div className="relative z-10  backdrop-blur-md p-8 rounded-lg text-center">
+            <h2 className="text-ivoryWhite py-10 text-6xl font-semibold tracking-wide">
+              Service
+            </h2>
+            <Link href="/services">
+              <motion.button
+                whileHover={{ scale: 1.05 }}
+                whileTap={{ scale: 0.95 }}
+                className="bg-warmWood text-white px-6 py-3 rounded shadow-md transition-all duration-300"
+              >
+                詳細を見る
+              </motion.button>
+            </Link>
           </div>
         </motion.div>
       </div>
