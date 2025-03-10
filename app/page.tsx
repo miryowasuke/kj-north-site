@@ -31,9 +31,14 @@ export default function Home() {
         <WorksSection />
       </section>
 
-      <section className="flex flex-col backdrop-blur-md py-5 w-full h-screen items-center justify-center">
-        <NewsSection />
-        <ContactSection />
+      <section className="flex flex-col backdrop-blur w-full h-screen items-center justify-center relative overflow-hidden">
+        <div className="group/news relative w-full overflow-hidden">
+          <NewsSection />
+        </div>
+
+        <div className="group/contact relative w-full overflow-hidden">
+          <ContactSection />
+        </div>
       </section>
     </main>
   );
