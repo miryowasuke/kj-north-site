@@ -107,13 +107,8 @@ export default function About() {
         <CompanyInfo />
         <div className="flex flex-col md:flex-row py-10">
           {/* Google Map */}
-          <div className="w-full md:w-1/2">
+          <div className="w-full">
             <GoogleMap />
-          </div>
-
-          {/* Contact Section */}
-          <div className="w-full md:w-1/2 md:ml-5 mt-10 md:mt-0">
-            <ContactSection />
           </div>
         </div>
       </div>

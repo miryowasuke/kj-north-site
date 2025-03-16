@@ -32,9 +32,9 @@ export default function CompanyInfo() {
                   所在地
                 </td>
                 <td className="py-3 text-left">
-                  〒063-0811
+                  〒001-0910
                   <br />
-                  札幌市西区琴似1条2丁目6-8-804
+                  北海道札幌市北区新琴似１０条３丁目２−5ｰ2
                 </td>
               </tr>
               <tr className="border-b border-gray-300">
@@ -52,14 +52,6 @@ export default function CompanyInfo() {
                   定休日
                 </td>
                 <td className="py-3 text-left">土日祝</td>
-              </tr>
-              <tr>
-                <td className="py-3 font-bold w-48 md:w-56 text-left">
-                  駐車場
-                </td>
-                <td className="py-3 text-left">
-                  ありません。お近くのコインパーキングをご利用ください。
-                </td>
               </tr>
             </tbody>
           </table>
