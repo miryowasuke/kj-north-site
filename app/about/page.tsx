@@ -4,7 +4,6 @@ import { motion } from "framer-motion";
 import Image from "next/image";
 import CompanyInfo from "../components/CompanyInfo";
 import GoogleMap from "../components/GoogleMap";
-import ContactSection from "../homeSection/ContactSection";
 
 export default function About() {
   const [isClient, setIsClient] = useState(false);
