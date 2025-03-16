@@ -97,8 +97,9 @@ export default function ScrollAnimation() {
           {/* 背景グラデーションを追加 */}
           <div className="absolute inset-0 bg-gradient-to-b from-neutralGray to-black opacity-70 z-10" />
 
-          <div className="relative z-10  backdrop-blur-md p-8 rounded-lg text-center">
-            <h2 className="text-ivoryWhite py-10 text-6xl font-semibold tracking-wide">
+          <div className="flex-col flex relative z-10 backdrop-blur-md p-6 md:p-8 rounded-lg text-center ">
+            {/* タイトルの下線を適切に配置 */}
+            <h2 className="text-ivoryWhite text-6xl font-semibold tracking-wide border-b-4 border-white inline-block w-fit mb-4">
               Service
             </h2>
             <Link href="/services">

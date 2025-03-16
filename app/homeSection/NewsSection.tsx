@@ -5,7 +5,7 @@ import Link from "next/link";
 
 export default function NewsSection() {
   return (
-    <section className="group relative container mx-auto px-4 grid grid-cols-1 md:grid-cols-2 gap-8 items-center overflow-hidden">
+    <section className="group relative container mx-auto px-4 py-4  grid grid-cols-1 md:grid-cols-2 gap-8 items-center overflow-hidden">
       {/* ホバー時スライド背景 */}
       <div
         className="absolute top-0 right-0 w-full md:w-1/2 h-full bg-gradient-to-b from-darkNavy to-black 
