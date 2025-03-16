@@ -1,4 +1,5 @@
 "use client";
+
 import React from "react";
 import { motion } from "framer-motion";
 
@@ -30,6 +31,7 @@ export default function Service() {
   return (
     <div className="bg-white py-20 px-4 md:px-16 lg:px-32 min-h-screen">
       <div className="max-w-5xl mx-auto">
+        {/* タイトル (修正なし) */}
         <motion.h2
           initial={{ opacity: 0, y: -30 }}
           animate={{ opacity: 1, y: 0 }}
@@ -45,6 +47,7 @@ export default function Service() {
           />
         </motion.h2>
 
+        {/* サービスリスト */}
         <div className="flex flex-col gap-16">
           {services.map((service, index) => (
             <motion.div
